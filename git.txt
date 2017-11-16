@@ -1,5 +1,6 @@
 pwd = gives the loaction where your git is 
 cd .. = gives one back from folder (better to use go on folder and open gitbash)
+q = after stuck to get back 
 cd (folder_name) = go front folder (using backlash(\) can use before space folder name)
 ls = give all the folders name in current git
 git init = for making the repository
@@ -14,8 +15,9 @@ git diff -staged = it shows the diffrence between recent and before the file was
 git rm filename = which delete the file can also be use for retving the delted file(If i rename file first add file then rm the first then commit)
 git mv firstname renamefile = which rename the filename easily it also moves file
 git commit -am "" = which need not add .. .It directly commit which also give the data is not commit but change
-git checkout -- filename = where git work on particaulr file 
+git checkout -- filename = where git work on particaulr file and remove it
 git reset HEAD filename = remove from head (like as add file make in head file)
 git revert commitnumber = It will revert the data back 
 For more :
 	-https://www.git-tower.com/blog/git-cheat-sheet
+thismgh jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
