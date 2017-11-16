@@ -1,0 +1,4 @@
+pwd = gives the loaction where your git is 
+cd .. = gives one back from folder (better to use go on folder and open gitbash)
+cd (folder_name) = go front folder (using backlash(\) can use before space folder name)
+ls = give all the folders name in current git

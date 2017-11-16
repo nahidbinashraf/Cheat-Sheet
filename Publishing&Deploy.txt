@@ -1,0 +1,70 @@
+<=======Domain,Hosting,Web Server Concept======>
+
+1.Domain :
+	-Your address name like http://www.something.com
+
+2.Web Server :
+	-Web server is a computer program that upon the request from a web browser, it delivers Web pages to a user’s computer.
+	-It can be either a software or a hardware.
+	-In other words, Web servers are computers that deliver (serves up) Web pages.  (Ex:IIS,XAMP)
+	-I can aslo use my pc as web server which can use everyone.But i have to run my pc app all the time.Besides it will slow down as ip is changes and so on
+
+3.Web Hosting : 
+	-Web host is a company or person that host your content on their server they have also web server.They give you a control panel.
+	-It also uses web server.
+	-"Shared hosting is using share with your hosting with others"
+
+For more :
+	https://www.quora.com/Can-I-host-my-own-website-with-my-own-computer-How-would-I-go-about-doing-that
+/*===================================*/
+<=======Website,Webapplication on (asp.net)======>
+
+4.Websites :
+	-It can be static or dynamic page(using php,asp.net and so on)
+	-It is used when you have limited edition of control such as one page to another pr show or retrive information in a small way 
+	-It uploaded the webserver in every page by page and expose the code and easily editable by replacing that individual code.
+	-It compile on the server dynamically which may take time consuming.
+	-It can have more language (VB.net,c#) which include in app_data
+
+5.Webapplication :
+	-It us use for many control such as button textbox where the tamplate are often same(facebook,online mifrosoft word etc.).
+	-If some changes then you have to change the overall webserver file.
+	-Good for unit testing
+	-Web application need to be fully complied before running so there will be no chance of getting any unknow complilation error,in website it can be possible.
+	-Web application are always better than the Web Sites. they provide better solution than web site.
+	-It have more features than website (don't support)
+	"If you are developing in a small way then develop in websites otherwise develop webapplication"
+
+	<#Key Points#>
+        You need to migrate large Visual Studio .NET 2003 applications to VS 2005? use the Web Application project.
+        You want to open and edit any directory as a Web project without creating a project file? use Web Site project.
+        You need to add pre-build and post-build steps during compilation? use Web Application project.
+        You need to build a Web application using multiple Web projects? use Web Application project.
+        You want to generate one assembly for each page? use Web Site project.
+        You prefer dynamic compilation and working on pages without building entire site on each page view? use Web Site project.
+        You prefer single-page code model to code-behind model? use Web Site project.
+	(Some coding errors are found in Web Applications at compile time that are not found in Web Sites until run time.)
+	<#============#>
+If you are doing n-tier development, I highly recommend the web application model. If you are doing a limited web site or a quick and dirty implementation, the web site model may have advantages.
+
+For more :
+	- https://stackoverflow.com/questions/398037/asp-net-web-site-or-asp-net-web-application
+	- http://maordavid.blogspot.com/2007/06/aspnet-20-web-site-vs-web-application.html
+
+/*===================================*/
+<=======Deployment,Publishing======>
+
+6.Deployment :
+	-Deployment means you set up your asp.net web application to the server where u need to host it.(Either copying all files )
+	-Deployment is creating an executable from the desired Framework and you need to move the exe to the server then you can install the executable.
+	-In other word you can deploy your projcet for using 
+7.Publishing :
+	-publish a website is just a method of deployment which is more secure as aspx pages are precompiled and this gives a bit of security and perfomance over deploying plain aspx pages
+	-Publish is just direct way to deploy the web site or a project to the server using FTP or other 	
+	-publish for everyone where everyone can use it without knowing all the details of backgroung and install it and carry it(pendrive)
+More on
+	-https://www.youtube.com/watch?v=4bwjMsJKzqA
+
+/*===================================*/
+
+.
