@@ -2,3 +2,15 @@ pwd = gives the loaction where your git is
 cd .. = gives one back from folder (better to use go on folder and open gitbash)
 cd (folder_name) = go front folder (using backlash(\) can use before space folder name)
 ls = give all the folders name in current git
+git init = for making the repository
+git status = gives you the recent status if the file add or not and so on 
+git add . = add all folder that changes (. means all folder)
+git add foldername = add for specific folder which add stages area
+git commit = remind the changes point
+git gommit -m "" = gives the commit a message what you done which you can see 
+git log = gives you the git commit status
+git diff = it shows the diffrence between recent and before the file was(working copy)
+git diff -staged = it shows the diffrence between recent and before the file was(staging copy such as add foldername)
+
+For more :
+	-https://www.git-tower.com/blog/git-cheat-sheet
