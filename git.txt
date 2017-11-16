@@ -20,6 +20,11 @@ git checkout -- , = get back(undo) all uncommitted file
 git reset HEAD filename = remove from head (like as add file make in head file)
 git revert commitnumber = It will revert the data back 
 :q =  to get back 
+git clone url = fro new git repositry which basically not use as we make git in local first .Then git cd git_name
+git remote add orgin url (the link is given by making new git repostiory) = for entry the git account
+git push origin master(In which Branch) = push the git in github
+git pull origin master = pull the gitfile in github(take the github file)
+.gitignore = this file ignore the file in gitcommit 
+
 For more :
 	-https://www.git-tower.com/blog/git-cheat-sheet
-thismgh jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj
