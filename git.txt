@@ -11,6 +11,7 @@ git gommit -m "" = gives the commit a message what you done which you can see
 git log = gives you the git commit status
 git diff = it shows the diffrence between recent and before the file was(working copy)
 git diff -staged = it shows the diffrence between recent and before the file was(staging copy such as add foldername)
+git rm filename = which delete the file can also be use for retving the delted file
 
 For more :
 	-https://www.git-tower.com/blog/git-cheat-sheet
