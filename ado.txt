@@ -1,0 +1,91 @@
+1.What is ado.net ?
+	-ADO.NET is an object-oriented set of libraries that allows you to interact with data sources.Commonly, the data source is a database, but it could also be a text file, an Excel spreadsheet, or an XML file.
+
+2.System.Data.SqlClient : 
+	-This namespace has all the classes like sqlconnection,sqlcommand,sqldataadaper and so on.Which is called sql .net data provider
+
+3.Different .NET Data Providers :
+	-Data Provider for SQL Server - System.Data.SqlClient
+	-Data Provider for Oracle - System.Data.OracleClient
+	-Data Provider for OLEDB - System.Data.OleDb(Microsoft acces,exel etc)
+	-Data Provider for ODBC - System.Data.Odbc
+        -There is System.data where dataset is present which is disconnected.The DataSet object is not provider specific. Once we connect to a Database, execute command, and retrieve data into .NET application. The data can then be stored in a DataSet and work independently of the database
+
+4.ADO.net object : 
+	#===connected model===#
+	-connection
+	-command 
+	-reader
+	-adapter(select,insert,update,delete)
+	-commandbuilder
+	-transiction
+	-parameters
+	-other providers
+	//============//
+	#===common object===#
+	-dataset
+	-datatable
+	-datarows
+	-dataview 
+	//============//
+	so on 
+For more :
+	-http://www.c-sharpcorner.com/UploadFile/puranindia/ado-net-objects-part-i/
+
+5.Sqlconnection :
+	-use for connecting the sql server or so on .Before using sqlconncetion,we need connection string which is database string and so on .
+	But all the things can easily done by dragged sqlconnection from tools and create it and then it will automatically add in web.config (app.config file in webform and also add refernce system.configuration) .
+	*Recommend to use in web.config.*  
+	Then import it from System.configuration namespace. and then make connection string then connect it.
+	Good practise to alwys take the sqlconnection in using() pattern which is automaticlly off con.open()
+	*using() use as try catch block and also use it to import namespace*   
+6.Sqlcommand :
+	-use for all the command in query execution 
+	-It has method like(executereader,executenonquery,executescalar) 
+	*executeReader - use for return one more value like select.
+	*executeNonquery - use for insert,update,delete.It also return integer*
+	*executeScalar - use for return single value (like 1 )* 
+      	"After command you need con.open()"  
+7.Sqlinjection :
+	-SQL injection is one of the most common web hacking techniques. SQL injection is the placement of malicious code in SQL statements, via web page input.
+	-"Always use parametreized query to prevent sqlinjection"
+	-sql profile use for tracing the sql 
+	-for output parameter "lbl.tex = convert.tostring("Employee num "+ outputParameter.value)"
+8.SqldataReader :
+	-It reads data effecient way and forward only.
+	-Need to open the connection 
+	-And it also need to close by using or try catch
+	-It also has read() method to row by row read 
+	-For two or more result use nextresult method otherwise it will give the first selct result
+
+9.SqldataAdapter :
+	-It is for disconnected data access model with dataset.(here, sqlcommand don'tneed insted use sqldataadapter)
+	-DataAdapter.fill() it opens the connection 
+10.Sytem.data :
+	-It has commandtype method 
+	-datatable and so on 
+	-also use to dataset	
+11.Dataset :
+	-In memroy representation where it store in memory of websetie and can format the table in real database ,web-based which need SqldataAdapter 
+	-for two or more tbles use tablename or index[]
+	-can use read.xml to read the xml and store in dataset
+	-can also be cache data using cache[] = dataset which is global and entire application it is visiable.
+12.SqlCommandBuilder :
+	-use for auto generate insert ,update ,delete based on query  
+13.SqlTransaction :
+	-It means all the data opertion succeeded or not at all operation execute
+	-Using it in the sqlcommand overloaded paratmeter
+	-using commit at least
+	-and then rollback   
+14.sqlbulkcopy :
+	-Copies all rows in the supplied DataTable to a destination table specified by the DestinationTableName property of the SqlBulkCopy object.
+	-we need to transfer a large amount of data from sources to a SQL Server database table	
+	-very good for copying large number of data
+	-writetoserver method use to write ib the server
+	-if column name same in db then we can't use columnmapping
+
+Recommend to use try catch block in ado.net
+For more :
+	-https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-code-examples#sqlclient
+	-http://csharp-station.com/Tutorial/AdoDotNet/Lesson01
+	-https://www.youtube.com/watch?v=aoFDyt8oG0k&list=PL6n9fhu94yhX5dzHunAI2t4kE0kOuv4D7
