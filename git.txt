@@ -24,7 +24,7 @@ git clone url = fro new git repositry which basically not use as we make git in 
 git remote add orgin url (the link is given by making new git repostiory) = for entry the git account
 git push origin master(In which Branch) = push the git in github
 git pull origin master = pull the gitfile in github(take the github file)
-.gitignore = this file ignore the file in gitcommit 
+.gitignore = This file ignore the file in gitcommit 
 
 For more :
 	-https://www.git-tower.com/blog/git-cheat-sheet
