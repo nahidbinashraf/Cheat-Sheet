@@ -1,0 +1,16 @@
+1. Types and Type members 
+	-In general classes, structs, enums, interfaces, delegates are called as types and fields, properties, constructors, methods etc., that normally reside in a type are called as type members.
+	Type members can have all the access modifiers, where as types can have only 2 (internal, public) of the 5 access modifiers.
+	-The default accessibility for a type is internal
+2. public
+	-The type or member can be accessed by any other code in the same assembly or another assembly that references it.
+   private
+	-The type or member can be accessed only by code in the same class or struct.
+   protected
+	-The type or member can be accessed only by code in the same class, or in a class that is derived from that class.
+   internal
+ 	-The type or member can be accessed by any code in the same assembly, but not from another assembly.
+
+   protected internal The type or member can be accessed by any code in the assembly in which it is declared, or from within a derived class in another assembly.
+
+   private protected The type or member can be accessed only within its declaring assembly, by code in the same class or in a type that is derived from that class
