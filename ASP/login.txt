@@ -1,0 +1,97 @@
+authentication
+	-the process or action of proving or showing something to be true, genuine, or valid.
+authorization
+	-Permission
+Anonymous users are identified using a question mark (?). You can specify all authenticated users using an asterisk (*)
+Fore more:
+-https://msdn.microsoft.com/en-us/library/wce3kxhd.aspx
+=====Windows Form Authentication=====
+<configuration>
+    <system.web>
+        <authentication mode="Forms" >
+            <forms loginUrl="login.aspx" name=".ASPNETAUTH" protection="None" path="/" timeout="20" >
+            </forms>
+        </authentication>
+<!-- This section denies access to all files in this 
+application except for those that you have not explicitly 
+specified by using another setting. -->
+        <authorization>
+            <deny users="?" /> 
+        </authorization>
+    </system.web>
+<!-- This section gives the unauthenticated 
+user access to the ThePageThatUnauthenticatedUsersCanVisit.aspx 
+page only. It is located in the same folder 
+as this configuration file. -->
+        <location path="ThePageThatUnauthenticatedUsersCanVisit.aspx">
+        <system.web>
+        <authorization>
+            <allow users ="*" />
+        </authorization>
+        </system.web>
+        </location>
+<!-- This section gives the unauthenticated 
+user access to all of the files that are stored 
+in the TheDirectoryThatUnauthenticatedUsersCanVisit folder.  -->
+        <location path="TheDirectoryThatUnauthenticatedUsersCanVisit">
+        <system.web>
+        <authorization>
+            <allow users ="*" />
+        </authorization>
+        </system.web>
+        </location>
+</configuration>
+
+Forms.authenticate which is present in using.system.web.security
+Fore More :
+https://msdn.microsoft.com/en-us/library/9wff0kyh.aspx
+https://www.codeproject.com/Articles/98950/ASP-NET-authentication-and-authorization
+https://stackoverflow.com/questions/3628445/allow-access-for-unathenticated-users-to-specific-page-using-asp-net-forms-authe
+=====================================
+
+<===================If you need to using cookies and session then =======>
+Session state :
+	Session["Patient"] = txtlusername.Text. To import it use Session["Patient"].ToString();
+	-To off enableseesionstate = false which disable session and it improve performance
+	-In web.config system.web you can define  
+		    <sessionState cookieless="true" timeout="25"></sessionState>
+	Besides,mode=off can also in web.config to off all the session which use in rare case when there is no use of session.
+	It is recommend to use if(Session["Patient"] !=null) then use session
+Cookie :
+	HttpCookie patient = new HttpCookie("user_cookies"); //creating cookie object where user_cookies is cookie name 
+       	patient["Patient"] = txtlusername.Text; // cookie content
+        patient.Expires = DateTime.Now.AddYears(3); // give the time/duration of cookie
+        Response.Cookies.Add(patient); // it gives the response in browser 
+another page use 
+if(Request.cookies != null)
+HttpCookie patient = Request.querystring("user_cookies"); 
+Then use ot when page do you want to go otherwise redirect.login page 
+
+For logout :
+            Response.Cookies["mycookie"].Expires = DateTime.Now.AddYears(-1);
+            Session.Clear();
+
+            Response.Redirect("~/Login.aspx");
+
+
+
+
+/////
+ALTER procedure [dbo].[spPatientLogin]
+@user_name nvarchar(50),
+@password nvarchar(50)
+as
+begin
+	Declare @count int
+	select @count = COUNT(user_name) from patient 
+	where [user_name] = @user_name and [password] = @password
+	if (@count = 1)
+		begin
+			select 1 as retunvalue 
+		end
+	else
+		begin
+			select -1 as retunvalue
+		end
+end
+

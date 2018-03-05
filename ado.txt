@@ -83,7 +83,8 @@ For more :
 	-very good for copying large number of data
 	-writetoserver method use to write ib the server
 	-if column name same in db then we can't use columnmapping
-
+15.Dataset vs datatable : 
+	-when we use one table then better to use datatable as dataset is a collection of datatable
 Recommend to use try catch block in ado.net
 For more :
 	-https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-code-examples#sqlclient

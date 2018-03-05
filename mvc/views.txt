@@ -1,0 +1,4 @@
+it is use to view the data which in browser
+We basically use actionresult though we can use it viewbag or so on(json) but as it's superior we use it 
+Viewbag and viewdata to pass data from controller but it doesn't give compile time error
+For razor to use c# code use @symbol 

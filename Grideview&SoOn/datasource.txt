@@ -1,0 +1,12 @@
+SqlDataSource - Use to work with SQL Server, OLE DB, ODBC, or Oracle databases.Here code needn't written in a very large way.It may make complexity when data schema is changed.
+	      -Recommend to use when application is too short
+ObjectDataSource -Use to work business objects, that manages data.Genarally, it is used.It can be used in 3-tier architecure and so on 
+		 -Sometimes,object data source maynit show.then rebuild it
+AccessDataSource - Use to work with Microsoft Access
+
+XmlDataSource - Use to work with XML files.
+	      - If the xml data has nodes then it won't work .Then we need to use xslt
+
+LinqDataSource - Enables us to use LINQ, to retrieve and modify data from a data object
+
+EntityDataSource - Use to work with Entity Data Model

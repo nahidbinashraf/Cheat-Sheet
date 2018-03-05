@@ -1,0 +1,4 @@
+controller is nothing but a class which inherits from Controller
+
+MVC url goes first controller name and then it's function and it's in router config file
+Use ActionName for using same controller functin name

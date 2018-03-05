@@ -1,0 +1,19 @@
+Master Page :
+	-Master page is genarally used to make ur app to make maintainable easly.IT gives the commo  layout for other.
+
+ContentPlaceholder :
+	-You can use one or more in master page .Using placeholderid define which placeholder you want to use.
+
+What is the ContentPlaceHolder in master page head? I mean how I can use it?
+	- The head ContentPlaceHolder enables pages to add custom content to the <head> section.
+	-The purpose of it is to allow child pages to provide Javascript code.
+Fore more :
+	-https://docs.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs 
+
+Content Page : 
+	-You can change the title name in title="" in first line
+
+Default Content Page :
+	-It is used when all the data including contentplaceholder data includin in it.
+Fore more :
+	-http://www.c-sharpcorner.com/forums/contentplaceholder-in-master-page-head

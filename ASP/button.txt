@@ -1,0 +1,7 @@
+Default Button if i press enter
+
+	-There is a defaultbutton property in form tag of aspx page in which you can set your login control id like defaultbutton="lgnUser"
+Fore more :
+	-https://www.codeproject.com/Questions/658534/Default-Button-When-Press-Enter-Key-In-Login-Contr
+Button right in bootstrap : Using pull-right class
+Cause Validation off will stop the button validation if its not require

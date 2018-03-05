@@ -1,0 +1,10 @@
+ I figured out the actual problem and able to done it in simple step. First, I make the AppendDataBoundItems behavior of my drop-down list To TRUE and kept the following code and it works perfectly.
+ 
+ protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+           DropDownList1.Items.Add(new ListItem("Select", "0", true));
+        }
+ 
+   }

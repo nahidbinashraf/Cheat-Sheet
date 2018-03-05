@@ -1,0 +1,1 @@
+In ul tag using margin:0 padding:0 will set the background ok which is use in div and reduce the use of margin left :-1 or something

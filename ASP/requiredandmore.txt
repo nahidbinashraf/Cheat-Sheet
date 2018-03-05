@@ -1,0 +1,10 @@
+For initial validation problem and enabling : 
+	-In .NET 4.5 the Validators use data-attributes and bounded Javascript to do the validation work, so .NET expects you to add a script reference for jQuery.   
+	<appSettings>
+      		<add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+	</appSettings>
+For More :
+	 -https://stackoverflow.com/questions/37230036/webforms-unobtrusivevalidationmode-requires-a-scriptresourcemapping-for-jquery
+
+SetFocusOnError="true" which focuses the textbox if the validation in not true
+For Number use regular expression is =  ^\d+$

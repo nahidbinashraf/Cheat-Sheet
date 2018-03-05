@@ -1,0 +1,34 @@
+RowdataboundEvent - it also raised for header and footer row. here e.row.rowtype=
+
+	Gridview has different types of rows.
+	1) Header
+	2) DataRow
+	3)Footer
+	4) Pager
+	5) Separator.
+	6) EmptyDataRow
+
+	Based on what is supposed to be accessed, RowType is mentioned in RowDataBoundEvent
+for more :https://www.codeproject.com/Questions/582586/Whypluswepluswriteplusitplusinplusgridplusviewplus
+AlterneteRowstyle = It is use to design odd number of rows
+e.row.cell[indexnumber] = which basically used in dynamic time .and select the row column or cell number
+databinder.eval() = Evaluates data-binding expressions at run time
+		-https://stackoverflow.com/questions/4813937/what-does-databinder-evalcontainer-dataitem-columnname-in-the-item-te
+
+Gridview auto delete link can be customize using type in webform.aspx. For using javascript in rowdatabound even we can use 
+control cont = e.row.cells[].controls[].If cont is linkbutton then ((linkbutton)cont).onclientclick = "return confirm(""are you sure?)" 
+
+Rowdeleteevent = it is fire when row is deleted or after row is delete
+(e.affectedrows>0) meaning the row has been affected and it work in sqldatasource but object data source you need to return int value of executenonquery and objectdatasource has updated value and you need to set it return value
+Rowupdateevent = it fires after the row update occured
+Datakeyname in gridview use as primary key for more composite key use (,)comma 
+For conflict detection in object datasoure you need
+
+make a method which has all parametres prefixname orginal and then in objectdatasource ConflictDetection="CompareAllValues" use conflictdetection and oldvalueparametrestring-"prefix{0}"
+Edit: use to datakeyanmes in gridview to edit objectdatasource
+BoundField is use to label the data as well as make textbox to editable mode
+
+Templatefiled:
+here , itemtemplatefiled : which use to label the field
+edititemtemplatefield ; use to editing the templatefiled
+

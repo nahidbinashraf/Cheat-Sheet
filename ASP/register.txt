@@ -1,0 +1,41 @@
+Store Procedure for registration
+-
+create procedure spPatientRegister
+@user_name nvarchar(50),
+@email nvarchar(50),
+@password nvarchar(50),
+@name nvarchar(50),
+@gender nvarchar(50),
+@contact_no nvarchar(50),
+@address nvarchar(MAX)
+as
+begin
+declare @count int
+declare @returnvalue int
+select @count = COUNT(user_name) from patient where user_name = @user_name
+	if @count > 0 
+		begin
+			set @returnvalue = -1
+		end
+	else
+		begin
+			set @returnvalue = 1
+			insert into patient (user_name,email,password,name,gender,contact_no,address)
+			values (@user_name,@email,@password,@name,@gender,@contact_no,@address)
+		end
+	select @returnvalue as retrunvalue
+
+end
+for passing query string :
+	Response.Redirect("~/Login.aspx?register=successfull");
+        if(Request.QueryString["register"] != null)
+        {
+            if(Request.QueryString["register"].ToString() == "successfull")
+            {
+
+            }
+            else
+            {
+                Response.Redirect("~/Login.aspx");
+            }
+        }
