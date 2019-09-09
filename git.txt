@@ -8,7 +8,7 @@ git status = gives you the recent status if the file add or not and so on
 git add . = add all folder that changes (. means all folder)
 git add foldername = add for specific folder which add stages area
 git commit = remind the changes point
-git gommit -m "" = gives the commit a message what you done which you can see 
+git commit -m "" = gives the commit a message what you done which you can see 
 git log = gives you the git commit status
 git diff = it shows the diffrence between recent and before the file was(working copy)
 git diff -staged = it shows the diffrence between recent and before the file was(staging copy such as add foldername)
@@ -25,6 +25,18 @@ git remote add orgin url (the link is given by making new git repostiory) = for 
 git push origin master(In which Branch) = push the git in github
 git pull origin master = pull the gitfile in github(take the github file)
 .gitignore = This file ignore the file in gitcommit 
+
+//9Sepetember,2019
+git log --oneline = which is used for single line 
+git show "commit number" =  which shows the chnges specific commit
+git diff = which is used when you make change and status show it and you want to see the reaL differences. Besides, the delete files, text show red and 
+add file show green
+git diff -staged = which is used when the git is in staged (add) then you want to see the diff 
+git checkout commitid <file name> = where commit id for that stage and file name for specific updated 
+git branch = which is used to check the branch and show the barnch and * indicates which branch in youare
+git branch branchname = which is used to create the branch. Here branchname will be crated as new branch 
+git checkout branchname = which is used to shift the branch 
+git branch -d branchname = which is used to delete. Here branchname will be deleted 
 
 For more :
 	-https://www.git-tower.com/blog/git-cheat-sheet
