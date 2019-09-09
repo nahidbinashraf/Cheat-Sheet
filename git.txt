@@ -38,5 +38,9 @@ git branch branchname = which is used to create the branch. Here branchname will
 git checkout branchname = which is used to shift the branch 
 git branch -d branchname = which is used to delete. Here branchname will be deleted 
 
+
+
+//
+
 For more :
 	-https://www.git-tower.com/blog/git-cheat-sheet
